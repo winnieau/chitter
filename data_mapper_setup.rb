@@ -1,8 +1,9 @@
 require 'data_mapper'
+require 'dm-validations'
 
 env = ENV['RACK_ENV'] || 'development'
 
-DataMapper.setup(:default, ENV["DATABASE_URL"] || "postgres://localhost/chitter_users")
+DataMapper.setup(:default, "postgres://localhost/chitter_users_#{env}")
 
 require './app/models/user'
 
