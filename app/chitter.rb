@@ -66,13 +66,13 @@ class Chitter < Sinatra::Base
 
 
 
-  get '/peeps/home' do
-    erb :'/peeps/home'
+  get '/peeps/homee' do
+    erb :'peeps/home'
   end
 
-  post '/peeps' do
+  post '/peeps/home' do
     @peep = Peep.new(peep: params[:peep])
-    redirect to('/peeps/home')
+    redirect to('/peeps')
   end
 
 

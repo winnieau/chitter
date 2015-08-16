@@ -1,8 +1,9 @@
 module PeepHelpers
   def post(peep)
     visit '/peeps/home'
-    fill_in :peep, with: peep
+    expect(page.status_code).to eq 200
+    fill_in :peep, with: peep.content
     click_button 'Peep'
-    expect(current_path).to eq '/peeps/home'
+
   end
 end
