@@ -3,6 +3,7 @@ require 'sinatra/session'
 require 'sinatra/flash'
 require_relative "../data_mapper_setup"
 require_relative "./models/user"
+require_relative "./models/peep"
 
 
 
@@ -62,6 +63,18 @@ class Chitter < Sinatra::Base
     session[:user_id] = false
     redirect to ('/')
   end
+
+
+
+  get '/peeps/home' do
+    erb :'/peeps/home'
+  end
+
+  post '/peeps' do
+    @peep = Peep.new(peep: params[:peep])
+    redirect to('/peeps/home')
+  end
+
 
 
 

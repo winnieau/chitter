@@ -11,6 +11,7 @@ require 'rspec'
 require 'database_cleaner'
 require 'factory_girl'
 require_relative 'helpers/session'
+require_relative 'helpers/peep'
 
 
 Capybara.app = Chitter
@@ -68,6 +69,7 @@ config.include FactoryGirl::Syntax::Methods
     DatabaseCleaner.clean
   end
   config.include SessionHelpers
+  config.include PeepHelpers
 
   # rspec-mocks config goes here. You can use an alternate test double
   # library (such as bogus or mocha) by changing the `mock_with` option here.
