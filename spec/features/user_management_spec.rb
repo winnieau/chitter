@@ -3,9 +3,9 @@ require 'spec_helper'
 
 feature 'User sign up' do
   context 'can sign up' do
-    scenario 'I can click a New User link which takes me to a signup page' do
+    scenario 'I can click a Sign up link which takes me to a signup page' do
       visit '/'
-      click_link 'New User'
+      click_link 'Sign up'
       expect(current_path).to eq '/users/new'
     end
     scenario 'I can sign up as a new user' do
