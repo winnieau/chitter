@@ -9,31 +9,57 @@ feature 'User sign up' do
       expect(current_path).to eq '/users/new'
     end
     scenario 'I can sign up as a new user' do
-      expect  { sign_up(email: 'winnie@example.com', password: 'apples', password_confirmation: 'apples') }.to change(User, :count).by(1)
+      user = build :user
+      expect  { sign_up(user)}.to change(User, :count).by(1)
       expect(page).to have_content('Welcome, winnie@example.com')
       expect(User.first.email).to eq('winnie@example.com')
     end
   end
   context 'user can not sign up' do
     scenario 'with a password that does not match' do
-      expect { sign_up(password_confirmation: 'wrong')}.not_to change(User, :count)
+      user = build :user, password: 'something else'
+      expect { sign_up(user)}.not_to change(User, :count)
       expect(current_path).to eq '/users'
       expect(page).to have_content 'Password and confirmation password do not match'
     end
     scenario 'without a valid email' do
-      expect{ sign_up(email: '')}.not_to change(User, :count)
+      user = build :user, email: ''
+      expect{ sign_up(user)}.not_to change(User, :count)
       expect(current_path).to eq '/users'
       expect(page).to have_content 'Please enter a valid email address'
     end
+    scenario 'with existing email' do
+      user = create :user
+      expect{ sign_up(user) }.not_to change(User, :count)
+      expect(current_path).to eq '/users'
+      expect(page).to have_content 'Email already registered'
+    end
+  end
+  feature 'user sign in' do
+    let(:user) { create :user }
+    context 'user signs in' do
+      scenario 'with correct credentials' do
+        sign_in(password: user.password, email: user.email)
+        expect(current_path).to eq '/'
+        expect(page).to have_content "Welcome, #{user.email}"
+      end
+    end
+    context 'user cannot sign in' do
+      scenario 'with wrong password' do
+        sign_in(email: user.email, password: !user.password)
+        expect(current_path).to eq '/sessions'
+        expect(page).to have_content 'Email or password incorrect'
+      end
+    end
   end
 
-  def sign_up(email: 'winnie@example.com',
-        password: 'apples',
-              password_confirmation: 'apples')
-    visit '/users/new'
-    fill_in :email, with: email
-    fill_in :password, with: password
-    fill_in :password_confirmation, with: password_confirmation
-    click_button 'Sign up'
+  feature 'user sign out' do
+    let(:user) { create :user }
+    scenario 'can sign out' do
+      sign_in(email: user.email, password: user.password)
+      click_button 'Sign out'
+      expect(current_path).to eq '/'
+      expect(page).not_to have_content "Welcome, #{user.email}"
+    end
   end
 end
