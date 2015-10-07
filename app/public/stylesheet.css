@@ -38,7 +38,6 @@ body {
   border-style: solid;
   border-color: white;
   border-width: 1px;
-  margin: 5px;
 
 }
 .button {
@@ -81,6 +80,8 @@ input[type=text] {
   height: 40px;
   width: 500px;
   font-size: 20px;
+  margin: 10px;
+  padding: 10px;
   font-family: 'Helvetica';
   color: #2A0D45;
   vertical-align: center;
@@ -128,4 +129,45 @@ input[type=submit] {
   margin: 5px;
   background-color: white;
   color: #9975B9;
+}
+
+.join {
+  color: white;
+  font-size: 45px;
+}
+
+.signup_page {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #AA8CC5;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  background-color: #AA8CC5;
+}
+
+input[type=password] {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #CCBADC;
+  border-radius: 5px;
+  height: 40px;
+  width: 500px;
+  padding: 10px;
+  margin: 15px;
+  font-size: 20px;
+}
+
+
+#login_prompt {
+  font-size: 45px;
+  color: white;
+}
+.login_page {
+  border-style: solid;
+  border-radius: 5px;
+  background-color: #AA8CC5;
+  border-color: #AA8CC5;
+  width: 45%;
+  text-align: center;
 }

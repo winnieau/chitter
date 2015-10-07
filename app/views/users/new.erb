@@ -1,10 +1,11 @@
-<h1 style="color: cornflowerblue; font-size: 30px; font-family: American Typewriter">Join Chitter today.</h1>
+<div class="signup_page">
+<div class="join">Join Chitter today.</div>
+  <form action='/users' method='post'>
 
-<form action='/users' method='post'>
+    <div id="email"><input name='email' type='text' placeholder= "Email" value='<%= @user.email %>'></div>
+    <div id="password"><input name='password' placeholder="Password" type='password'></div>
+    <div id="confirmation"><input name='password_confirmation' placeholder="Confirm password" type='password'></div>
+    <input type='submit' value='Sign up'>
 
-  Email: <input name='email' type='text' value='<%= @user.email %>'>
-  Password: <input name='password' type='password'>
-  Password Confirmation: <input name='password_confirmation' type='password'>
-  <input type='submit' value='Sign up'>
-
-</form>
+  </form>
+</div>
