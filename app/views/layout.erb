@@ -12,7 +12,8 @@
     <% if current_user %>
       <form action='/sessions' method='post'>
         <input type='hidden' name='_method' value='delete'>
-        <input type='submit' value='Sign out'>
+        <input id="signout" type='submit' value='Sign out'>
+        <a class="peep_button" id="peeps" href="/peeps/new">Peep</a>
       </form>
       <h2> Welcome, <%= current_user.email %></h2>
 
