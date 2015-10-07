@@ -5,11 +5,7 @@ require_relative "../data_mapper_setup"
 require_relative "./models/user"
 require_relative "./models/peep"
 
-
-
-
 class Chitter < Sinatra::Base
-
 
   enable :sessions
   set :session_secret, "super secret"
@@ -77,21 +73,6 @@ class Chitter < Sinatra::Base
     Peep.create(content: params[:content])
     redirect to('/peeps')
   end
-
-
-
-
-
-  # get '/peeps/home' do
-  #   erb :'peeps/home'
-  # end
-
-  # post '/peeps/home' do
-  #   @peep = Peep.create(peep: params[:peep])
-  #   redirect to('/peeps')
-  # end
-
-
 
 
   helpers do

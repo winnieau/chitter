@@ -2,9 +2,10 @@
 <html>
   <head>
     <title>Chitter</title>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css">
   </head>
 
-  <body style="color: cornflowerblue; font-size: 25px; font-family: American Typewriter">
+  <body>
     <% if flash[:notice] %>
       <div id='notice'> <%= flash[:notice] %></div>
     <% end %>
@@ -14,7 +15,7 @@
         <input type='submit' value='Sign out'>
       </form>
       <h2> Welcome, <%= current_user.email %></h2>
-      
+
     <% end %>
     <%= yield %>
   </body>
