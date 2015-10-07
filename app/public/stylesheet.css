@@ -133,7 +133,7 @@ input[type=submit] {
 
 .join {
   color: white;
-  font-size: 45px;
+  font-size: 55px;
 }
 
 .signup_page {
@@ -141,8 +141,9 @@ input[type=submit] {
   border-radius: 5px;
   border-color: #AA8CC5;
   width: 50%;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
+  margin-left: 25%;
   background-color: #AA8CC5;
 }
 
@@ -160,14 +161,17 @@ input[type=password] {
 
 
 #login_prompt {
-  font-size: 45px;
+  font-size: 30px;
   color: white;
 }
 .login_page {
+  text-align: center;
   border-style: solid;
   border-radius: 5px;
   background-color: #AA8CC5;
   border-color: #AA8CC5;
-  width: 45%;
-  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+  padding: 10px;
+
 }
