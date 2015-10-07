@@ -3,7 +3,7 @@ require 'dm-validations'
 
 env = ENV['RACK_ENV'] || 'development'
 
-DataMapper.setup(:default, "postgres://localhost/chitter_users_#{env}")
+DataMapper.setup(:default, "postgres://localhost/chitter_#{env}")
 
 require './app/models/user'
 require './app/models/peep'

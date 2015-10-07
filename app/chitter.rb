@@ -64,16 +64,32 @@ class Chitter < Sinatra::Base
     redirect to ('/')
   end
 
-
-
-  get '/peeps/homee' do
-    erb :'peeps/home'
+  get '/peeps' do
+    @peeps = Peep.all
+    erb :'peeps/index'
   end
 
-  post '/peeps/home' do
-    @peep = Peep.new(peep: params[:peep])
+  get '/peeps/new' do
+    erb :'peep'
+  end
+
+  post '/peeps' do
+    Peep.create(content: params[:content])
     redirect to('/peeps')
   end
+
+
+
+
+
+  # get '/peeps/home' do
+  #   erb :'peeps/home'
+  # end
+
+  # post '/peeps/home' do
+  #   @peep = Peep.create(peep: params[:peep])
+  #   redirect to('/peeps')
+  # end
 
 
 
