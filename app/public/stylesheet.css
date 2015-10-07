@@ -1,4 +1,7 @@
-
+body {
+  background-color: #EEE8F3;
+  font-family: 'Helvetica'
+}
 .trending {
   color: white;
   font-size: 300%;
@@ -53,14 +56,76 @@
 
 }
 
-h2 {
+.peep {
+  color: white;
+  font-size: 30px;
   font-family: 'Helvetica';
-  font-size: 200%;
-  color: #CCBADC;
+  border-style: solid;
+  border-color: #CCBADC;
+  padding-right: 50px;
+  padding-bottom: 80px;
+  padding-top: 50px;
+  text-align: center;
+  background-color: #CCBADC;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-/*form {
+input[type=text] {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #CCBADC;
+  border-radius: 5px;
+  height: 40px;
+  width: 500px;
+  font-size: 20px;
   font-family: 'Helvetica';
-  font-size: 100px;
-  color: #CCBADC;
-}*/
+  color: #2A0D45;
+  vertical-align: center;
+}
+
+input[type=submit]:hover{
+  border-radius: 5px;
+  border-color: white;
+  background-color: white;
+  border-width: 1px;
+  padding: 10px;
+  width: 80px;
+  height: 40px;
+  font-size: 15px;
+  color: #9975B9;
+}
+input[type=submit] {
+  border-radius: 5px;
+  border-color: #9975B9;
+  background-color: #9975B9;
+  border-width: 1px;
+  padding: 10px;
+  width: 80px;
+  height: 40px;
+  font-size: 15px;
+  color: white;
+}
+
+.peep_page {
+  color: white;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #AA8CC5;
+  padding: 50px;
+  background-color: #AA8CC5;
+  margin: 10px;
+
+}
+
+#each_peep {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: white;
+  padding: 30px;
+  margin: 5px;
+  background-color: white;
+  color: #9975B9;
+}
