@@ -1,5 +1,5 @@
 require 'data_mapper'
-require './app/data_mapper_setup'
+require '../app/data_mapper_setup'
 
 
 task :auto_migrate do
