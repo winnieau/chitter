@@ -3,8 +3,8 @@ require 'sinatra/base'
 require 'sinatra/session'
 require 'sinatra/flash'
 require_relative "../data_mapper_setup"
-require_relative "./models/user"
-require_relative "./models/peep"
+# require_relative "./models/user"
+# require_relative "./models/peep"
 DataMapper.auto_upgrade!
 
 
