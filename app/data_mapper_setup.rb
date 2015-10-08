@@ -1,5 +1,3 @@
-require 'data_mapper'
-require 'dm-validations'
 
 env = ENV['RACK_ENV'] || 'development'
 
