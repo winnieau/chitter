@@ -6,7 +6,7 @@ gem 'sinatra-flash'
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'sinatra-session'
-
+gem 'rake'
 
 group :test do
   gem 'capybara'
