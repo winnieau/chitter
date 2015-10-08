@@ -8,8 +8,6 @@ require_relative "./models/peep"
 class Chitter < Sinatra::Base
 
 
- set :public, proc { File.join(root, '.', 'public') }
-
   enable :sessions
   set :session_secret, "super secret"
   register Sinatra::Flash
