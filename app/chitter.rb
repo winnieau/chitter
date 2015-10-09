@@ -4,6 +4,7 @@ require 'sinatra/flash'
 require 'data_mapper'
 require 'dm-core'
 require 'dm-migrations'
+require 'dm-validations'
 
 require_relative "./models/user"
 require_relative "./models/peep"
@@ -79,7 +80,7 @@ class Chitter < Sinatra::Base
   end
 
   post '/peeps' do
-    Peep.create(content: params[:content])
+    Peep.create(content: params[:content], created_at: params[:created_at])
     redirect to('/peeps')
   end
 

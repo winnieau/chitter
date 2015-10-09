@@ -8,6 +8,7 @@ gem 'dm-postgres-adapter'
 gem 'sinatra-session'
 gem 'rake'
 gem 'pg'
+gem 'dm-timestamps'
 
 group :test do
   gem 'capybara'

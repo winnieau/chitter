@@ -190,6 +190,7 @@ DEPENDENCIES
   data_mapper
   database_cleaner
   dm-postgres-adapter
+  dm-timestamps
   factory_girl
   pg
   rake
