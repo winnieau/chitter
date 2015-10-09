@@ -1,4 +1,3 @@
-require 'factory_girl'
 
 class Peep
   include DataMapper::Resource
