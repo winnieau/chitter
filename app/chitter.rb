@@ -80,7 +80,14 @@ class Chitter < Sinatra::Base
   end
 
   post '/peeps' do
-    Peep.create(content: params[:content])
+    Peep.create(content: params[:content], created_at:)
+    redirect to('/peeps')
+  end
+  
+
+  delete '/peep/:id' do
+    @peep = Peep.get(params[:id])
+    @peep.destroy
     redirect to('/peeps')
   end
 
