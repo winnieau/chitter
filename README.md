@@ -37,6 +37,6 @@ I want to see the time at which it was made
 Screenshot
 ---
 
-![alt text](https://github.com/winnieau/chitter-challenge/tree/master/app/public/images/chitter.png)
+https://github.com/winnieau/chitter-challenge/tree/master/app/public/images/chitter.png
 
 
