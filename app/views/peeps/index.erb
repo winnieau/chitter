@@ -9,7 +9,12 @@
           <%= peep.content %> <div>posted on: </div>
           <%= peep.created_at %>
           </div>
+          <form action= '<%= "/peep/#{peep.id}" %>' method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="delete">
+        </form>
       <% end %>
+
     </ul>
   </div>
 </div>
