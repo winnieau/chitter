@@ -8,13 +8,14 @@
         <div id="each_peep">
           <%= peep.content %> <div>posted on: </div>
           <%= peep.created_at %>
-          </div>
+        </div>
+        <% if current_user %>
           <form action= '<%= "/peep/#{peep.id}" %>' method="post">
-          <input type="hidden" name="_method" value="delete">
-          <input type="submit" value="delete">
-        </form>
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="delete">
+          </form>
+        <% end %>
       <% end %>
-
     </ul>
   </div>
 </div>
