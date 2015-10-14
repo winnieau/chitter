@@ -3,6 +3,10 @@ Chitter Challenge
 
 To create a Twitter clone that will allow the users to post messages to a public stream.
 
+Heroku (live)
+---
+Click [here](https://lit-retreat-2348.herokuapp.com/) to see the app in action. 
+
 Features:
 -------
 
