@@ -7,7 +7,7 @@
       <% @peeps.reverse.each do |peep| %>
         <div id="each_peep">
           <%= peep.content %> <div>posted on: </div>
-          <%= peep.created_at %>
+          <%= peep.timestamp %>
         </div>
         <% if current_user %>
           <form action= '<%= "/peep/#{peep.id}" %>' method="post">
