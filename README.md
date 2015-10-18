@@ -36,7 +36,15 @@ So that I can better appreciate the context of a peep
 I want to see the time at which it was made
 ```
 
+To Run Locally
+---
 
+```
+$ git clone https://github.com/winnieau/chitter.git
+$ bundle install
+$ rackup
+Open a tab with the port specified 
+```
 
 Screenshot
 ---
