@@ -51,4 +51,9 @@ Screenshot
 
 https://github.com/winnieau/chitter-challenge/tree/master/app/public/images/chitter.png
 
+About me
+---
+
+I am [Winnie Au](https://github.com/winnieau) from [Makers Academy](http://www.makersacademy.com/) Ronin cohort July 2015!
+
 
