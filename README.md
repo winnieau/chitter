@@ -49,7 +49,7 @@ Open a tab with the port specified
 Screenshot
 ---
 
-https://github.com/winnieau/chitter-challenge/tree/master/app/public/images/chitter.png
+View [here](https://github.com/winnieau/chitter-challenge/tree/master/app/public/images/chitter.png)
 
 About me
 ---
