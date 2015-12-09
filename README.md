@@ -56,4 +56,5 @@ About me
 
 I am [Winnie Au](https://github.com/winnieau), a junior full-stack developer from [Makers Academy](http://www.makersacademy.com/) Ronin cohort July 2015! Currently seeking employment. 
 
+To see my Github CV, click [here](https://github.com/winnieau/CV).
 
